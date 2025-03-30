@@ -15,17 +15,17 @@ void explainPair(){
 
 
 //vector start
-void explainVector {
+void explainVector() {
 
     vector<int> v;
 
     v. push_back (1);
     v. emplace_back(2);
 
-    vector<pair<int, int»>vec;
+    vector<pair<int, int>>vec;
 
-    v. push_back ({1, 2});
-    v. emplace_back(1, 2);
+    vec.push_back({1, 2});
+    vec.emplace_back(1, 2);
 
     vector<int> v(5, 100);
 
@@ -38,7 +38,17 @@ void explainVector {
     vector<int>:: iterator it = v. begin();
 
     it++;
-    cout < *(it) « " ";
+    cout << *(it) << " ";
+
+    it = it + 2;
+    cout << *(it)<< " ";
+
+    vector<int>:: iterator it = v.end();
+    // vector<int>:: iterator it = v.rend();
+    // vector<int>:: iterator it = v.rbegin();
+
+    // cout << v[0] << " " << v.at[0];
+    cout << v.back() << " ";
 }
 
 
