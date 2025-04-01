@@ -59,6 +59,86 @@ void explainVector() {
     }
 }
 
+void explainList(){
+    list<int> ls;
+
+    ls.push_back(1);
+    ls.emplace_back(2);
+
+    ls.push_front(3);
+    ls.emplace_front(4);
+
+    //rest same as vector
+    //begin, end, rbegin, rend, clear, insert, size, swap
+}
+
+void explainDeque(){
+    deque<int> dq;
+
+    dq.push_back(1);
+    dq.emplace_back(2);
+
+    dq.push_front(3);
+    dq.emplace_front(4);
+
+    dq.pop_back();
+    dq.pop_front();
+
+    dq.back();
+    dq.front();
+
+    //rest same as vector
+    //begin, end, rbegin, rend, clear, insert, size, swap
+}
+
+void expalinStack(){
+    stack<int> st;
+
+    st.push(1);
+    st.emplace(2);
+
+    st.top();
+    st.pop();
+
+    stack<int> st1, st2;
+    st1.swap(st2);
+}
+
+void explainQueue(){
+    queue<int> q;
+
+    q.push(1);
+    q.emplace(2);
+
+    q.front();
+    q.back();
+    q.pop();
+
+    queue<int> q1, q2;
+    q1.swap(q2);
+}
+
+void explainPriorityQueue(){
+    priority_queue<int> pq;
+
+    pq.push(1);
+    pq.emplace(2);
+
+    pq.top();
+    pq.pop();
+
+    priority_queue<int> pq1, pq2;
+    pq1.swap(pq2);
+
+    //minimu heap
+    priority_queue<int, vector<int>, greater<int>> pq;
+    pq.push(1);
+    pq.push(2);
+    pq.push(3);
+    pq.push(4);
+
+    cout<<pq.top();
+}
 
 int main() {
     explainPair();
