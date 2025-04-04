@@ -4,31 +4,23 @@ using namespace std;
 class Solution {
     public:
         bool isPalindrome(string s) {
-            string cleaned = "";
-            
-            // Remove non-alphanumeric characters and convert to lowercase
-            for (char c : s) {
-                if (isalnum(c)) {
-                    cleaned += tolower(c);
-                }
-            }
-    
-            // Two-pointer approach to check palindrome
-            int left = 0, right = cleaned.size() - 1;
-            while (left < right) {
-                if (cleaned[left] != cleaned[right]) {
-                    return false;
-                }
-                left++;
-                right--;
-            }
-            return true;
-        }
+           int start=0;
+           int end=s.size()-1;
+           while(start<=end){
+               if(!isalnum(s[start])){start++; continue;}
+               if(!isalnum(s[end])){end--;continue;}
+               if(tolower(s[start])!=tolower(s[end]))return false;
+               else{
+                   start++;
+                   end--;
+               }
+           }
+           return true;
+    }
     };
 
 int main() {
     Solution s;
     cout << s.isPalindrome("A man, a plan, a canal: Panama");
-    
     return 0;
 }
