@@ -56,6 +56,25 @@ int fib(int n) {
     return fib(n-1) + fib(n-2);
 }
 
+bool isPalindrome(int x) {
+    int palindrome = 0;
+    int y=x;
+
+    if(x < 0) return false;
+
+    while(x != 0) {
+        int last_digit = x % 10;
+        palindrome = palindrome * 10 + last_digit;
+        x /= 10;
+    }
+    return (palindrome == y);
+}
+
+int fib(int n) {
+    if(n==0 || n==1) return n;
+    return fib(n-1) + fib(n-2);
+}
+
 int main() {
     int n;
     cin>>n;
