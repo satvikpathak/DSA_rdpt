@@ -1,0 +1,1 @@
+//0,1,2 brute approach sorting preferred merge sort then hash map then optimal
