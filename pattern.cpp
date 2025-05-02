@@ -79,5 +79,5 @@ int pattern5(int n){
 int main(){
     int n;
     cin>>n;
-    pattern5(n);
+    pattern2(n);
 }
