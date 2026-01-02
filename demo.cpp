@@ -1,15 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int explainVector(){
-    vector<int> s;
-    s.push_back(1);
-    s.emplace_back(2);
+vector<int> explainVector(){
+    vector<int> s(5,100);
+    s.push_back(1000);
+    s.emplace_back(2000);
+    for(auto it:s){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+
+    for(auto it=s.begin(); it != s.end(); it++){
+        cout<<*it<<" ";
+    }
+cout<<endl;
+    for(vector<int>::iterator it = s.begin(); it != s.end(); it++){
+        cout<<*it<<" ";
+    }
     return s;
 }
 
 int main(){
-    int x = explainVector();
-    cout<<x;
+    explainVector();
     return 0;
 }
