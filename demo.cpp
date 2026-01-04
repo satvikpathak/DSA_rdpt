@@ -104,3 +104,87 @@
 //     return 0;
 // }
 
+//character hashing
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     string s;
+//     cin>>s;
+
+//     //precompute
+//     int hash[26] = {0};
+//     for(int i=0; i<s.size(); i++){
+//         hash[s[i] - 'a'] ++;
+//     }
+
+//     int q;
+//     cin>>q;
+//     while(q--){
+//         char c;
+//         cin>>c;
+//         //fetch
+//         cout<<hash[c -'a']<<endl;
+//     }
+
+//     return 0;
+// }
+
+//hashing using map
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0; i<n; i++){
+//         cin>>arr[i];
+//     }
+
+//     //precompute
+//     unordered_map<int, int> mpp;
+//     for(int i=0; i<n;i++){
+//         mpp[arr[i]] ++;
+//     }
+
+//     //iterate over map
+//     for(auto it:mpp){
+//         cout<<it.first<<"->"<<it.second<<endl;
+//     }
+
+//     int q;
+//     cin>>q;
+//     while(q--){
+//         int c;
+//         cin>>c;
+//         //fetch
+//         cout<<mpp[c]<<endl;
+//     }
+//     return 0;
+// }
+
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     int arr[3] = {3,4,2};
+//     int nums[3];
+
+//     for(int i=0; i<3; i++){
+//         nums[i] = arr[i]*arr[i];
+//     }
+
+//     for(int i=0; i<3; i++){
+//         cout<<nums[i]<<" ";
+//     }
+
+//     sort(nums, nums+3);
+//     cout<<endl;
+
+//     for(int i=0; i<3; i++){
+//         cout<<nums[i]<<" ";
+//     }
+
+//     return 0;
+// }
