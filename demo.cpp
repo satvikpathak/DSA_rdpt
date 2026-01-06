@@ -189,49 +189,28 @@
 //     return 0;
 // }
 
+// #include<bits/stdc++.h>
+// using namespace std;
 
-//practice LC 977: Squares of a Sorted Array
-// optimized 2 pointer approach
 // class Solution {
 // public:
-//     vector<int> sortedSquares(vector<int>& nums) {
+//     bool check(vector<int>& nums) {
 //         int n = nums.size();
-//         vector<int> numsq(n);
 
-//         int left = 0;
-//         int right = n-1;
-
-//         for(int i=n-1; i>=0; i--){
-//             if(abs(nums[left]) > abs(nums[right])){
-//                 numsq[i] = nums[left] * nums[left];
-//                 left++;
+//         for(int i=0; i<n - 1; i++){
+//             if(nums[i]<=nums[i+1]){
+//                 continue;
 //             }
 
-//             else{
-//                 numsq[i] = nums[right] * nums[right];
-//                 right--;
-//             }
+//             else return false;
 //         }
-
-//         return numsq;
+//         return true;
 //     }
 // };
 
-
-//practice LC 344: Reverse String
-// class Solution {
-// public:
-//     void reverseString(vector<char>& s) {
-//         int left = 0;
-//         int right = s.size() - 1;
-
-//         while(left<right){
-//             char temp = s[left];
-//             s[left] = s[right];
-//             s[right] = temp;
-
-//             left ++;
-//             right --;
-//         }
-//     }
-// };
+// int main(){
+//     Solution s;
+//     vector<int> nums = {1,2,3,4,5};
+//     cout<<s.check(nums)<<endl;
+//     return 0;
+// }
