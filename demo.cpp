@@ -189,28 +189,27 @@
 //     return 0;
 // }
 
-// #include<bits/stdc++.h>
-// using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
 
-// class Solution {
-// public:
-//     bool check(vector<int>& nums) {
-//         int n = nums.size();
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+        int n = nums.size();
 
-//         for(int i=0; i<n - 1; i++){
-//             if(nums[i]<=nums[i+1]){
-//                 continue;
-//             }
+        for(int i=0; i<n - 1; i++){
+            if(nums[i]<=nums[i+1]){
+            }
 
-//             else return false;
-//         }
-//         return true;
-//     }
-// };
+            else return false;
+        }
+        return true;
+    }
+};
 
-// int main(){
-//     Solution s;
-//     vector<int> nums = {1,2,3,4,5};
-//     cout<<s.check(nums)<<endl;
-//     return 0;
-// }
+int main(){
+    Solution s;
+    vector<int> nums = {1,2,3,6,5};
+    cout<<s.check(nums)<<endl;
+    return 0;
+}
