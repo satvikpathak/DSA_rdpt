@@ -27,7 +27,13 @@ int main() {
     cout << endl;
     return 0;
 }
+#include<bits/stdc++.h>
+using namespace std;
 
+int main(){
+    
+    return 0;
+}
 // class Solution {
 //     public:
 //         void rotate(vector<int>& nums, int k) {
