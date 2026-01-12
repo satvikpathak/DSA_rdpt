@@ -24,3 +24,23 @@ int main() {
     cout << "Missing number: " << missingNum << endl;
     return 0;
 }
+
+
+//brute force
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        for(int i = 0; i <= n; i++){ // Changed to <=
+            int flag = 0;
+            for(int j = 0; j < n; j++){
+                if(nums[j] == i){
+                    flag++;
+                    break; // Optimization: stop searching once found
+                }
+            }
+            if(flag == 0) return i;
+        }
+        return -1; // Should never reach here
+    }
+};
