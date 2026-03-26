@@ -10,7 +10,7 @@ public:
 };
 
 //implementation without STL
-
+//do again with pen and paper, try to dry run the code on paper to understand the logic
 
 int main(){
     
