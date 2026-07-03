@@ -30,3 +30,21 @@ int main(){
     cout << sol.majorityElement(nums) << endl;    
     return 0;
 }
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int, int> counts; 
+        
+        for(int i = 0; i < nums.size(); i++){
+            // Increase the count for this specific number
+            counts[nums[i]]++; 
+            
+            // Check if this specific number's count has crossed the threshold
+            if(counts[nums[i]] > nums.size() / 2){
+                return nums[i];
+            }
+        }
+        return 0; 
+    }
+};
