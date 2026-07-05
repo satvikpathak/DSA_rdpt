@@ -24,3 +24,33 @@ int main() {
     cout << s.isPalindrome("A man, a plan, a canal: Panama");
     return 0;
 }
+
+// class Solution {
+// public:
+//     string clean(string s){
+//         string newString = "";
+//         char ch;
+//         for(int i=0; i<s.size(); i++){
+//             ch = s[i];
+//             ch = tolower(ch);
+
+//             if((ch>='a' && ch<='z') || (ch>='0' && ch<='9')){
+//                 newString.push_back(ch);
+//             }
+//         }
+//         return newString;
+//     }
+
+//     bool helper(string s){
+//         for(int i=0; i<s.size()/2; i++){
+//             if(s[i] != s[s.size()-i-1]){
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+
+//     bool isPalindrome(string s) {
+//         return helper(clean(s));
+//     }
+// };
