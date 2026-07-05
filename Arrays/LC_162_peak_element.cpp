@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
@@ -16,3 +19,8 @@ public:
         return left;
     }
 };
+
+int main(){
+    
+    return 0;
+}
