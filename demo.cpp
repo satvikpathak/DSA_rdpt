@@ -213,3 +213,55 @@ int main(){
     cout<<s.check(nums)<<endl;
     return 0;
 }
+
+// class Solution {
+// public:
+//     vector<int> sortedSquares(vector<int>& nums) {
+//         int left = 0;
+//         int right = nums.size() - 1;
+//         vector<int> ans(nums.size());
+//         int index = nums.size() - 1;
+
+//         while(left <= right){
+//             if(abs(nums[left]) > abs(nums[right])){
+//                 ans[index] = nums[left] * nums[left];
+//                 left ++;
+//             }
+//             else{
+//                 ans[index] = nums[right] * nums[right];
+//                 right --;
+//             }
+
+//             index --;
+//         }
+
+//         return ans;
+//     }
+// };
+
+// class Solution {
+// public:
+//     double findMaxAverage(vector<int>& nums, int k) {
+//         long long sum = 0;
+//         for(int i=0; i<k; i++){
+//             sum += nums[i];
+//         }
+
+//         long long maxSum = sum;
+
+//         int left = 0;
+//         int right = k;
+
+//         while(right < nums.size()){
+//             sum -= nums[left];
+//             left ++;
+
+//             sum += nums[right];
+//             right ++;
+
+//             maxSum = max(maxSum, sum);
+//         }
+
+//         return (double)maxSum/k;
+//     }
+// };
