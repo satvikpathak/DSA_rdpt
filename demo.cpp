@@ -265,3 +265,81 @@ int main(){
 //         return (double)maxSum/k;
 //     }
 // };
+
+//LC209 revision
+// class Solution {
+// public:
+//     int minSubArrayLen(int target, vector<int>& nums) {
+//         int left = 0;
+//         int right = 0;
+//         int sum = 0;
+//         int length = INT_MAX;
+
+//         while(right < nums.size()){
+//             sum += nums[right];
+
+//             while(sum >= target){
+//                 length = min(length, right - left + 1);
+//                 sum -= nums[left];
+//                 left ++;
+//             }
+//             right++;
+//         }
+
+//         if(length == INT_MAX) return 0;
+//         return length;
+//     }
+// };
+
+//LC_3
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         int left = 0;
+//         int right = 0;
+//         int length = 0;
+//         unordered_set<char> seen;
+//         while(right < s.size()){
+//             while(seen.find(s[right]) != seen.end()){
+//                 seen.erase(s[left]);
+//                 left++;
+//             }
+
+//             seen.insert(s[right]);
+//             length = max(length, right - left + 1);
+//             right ++;
+//         }
+
+//         return length;
+//     }
+// };
+
+//lc_88
+// class Solution {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//      int right1 = m-1;
+//      int right2 = n-1;
+//      int tPtr = m + n - 1;
+
+//      while(right1 >= 0 && right2 >= 0){
+//         if(nums1[right1] > nums2[right2]){
+//             nums1[tPtr] = nums1[right1];
+//             right1--;
+//             tPtr--;
+//         }
+
+//         else {
+//             nums1[tPtr] = nums2[right2];
+//             right2 --;
+//             tPtr--;
+//         }
+//     }   
+
+//     while(right2 >= 0){
+//         nums1[tPtr] = nums2[right2];
+//         right2--;
+//         tPtr--;
+//     }
+//     }
+// };
