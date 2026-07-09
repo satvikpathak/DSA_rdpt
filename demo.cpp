@@ -364,3 +364,65 @@ int main(){
 //         }
 //     }
 // };
+
+//lc283
+// class Solution {
+// public:
+//     void moveZeroes(vector<int>& nums) {
+//         int read = 0;
+//         int write = 0;
+
+//         for(int write=0; write<nums.size(); write++){
+//             if(nums[write] != 0){
+//                 nums[read] = nums[write];
+//                 read++;
+//             }
+//         }
+
+//         while(read < nums.size()){
+//             nums[read] = 0;
+//             read++;
+//         }
+        
+//     }
+// };
+
+//lc_11
+// class Solution {
+// public:
+//     int maxArea(vector<int>& height) {
+//         int left = 0;
+//         int right = height.size() - 1;;
+//         int maxArea = 0;
+
+//         while(left <= right){
+//             int area = min(height[left], height[right]) * (right - left);
+//             maxArea = max(maxArea, area);
+
+//             if(height[left] < height[right]) left++;
+//             else right--;
+//         }
+
+//         return maxArea;
+//     }
+// };
+
+//lc_242
+// class Solution {
+// public:
+//     bool isAnagram(string s, string t) {
+//         if(s.size() != t.size()) return false;
+
+//         unordered_map<char, int> mpp;
+//         for(int i=0; i<s.size(); i++){
+//             mpp[s[i]]++;
+//             mpp[t[i]]--;
+//         }
+
+//         for(auto [key, val] : mpp){
+//             if(val != 0) return false;
+//         }
+
+//         return true;
+//     }
+// };
