@@ -608,3 +608,103 @@ int main(){
 //         return -1;
 //     }
 // };
+
+//lc242
+// class Solution {
+// public:
+//     bool isAnagram(string s, string t) {
+//         if(s.size() != t.size()) return false;
+
+//         unordered_map<char, int> mpp;
+//         for(int i=0; i<s.size(); i++){
+//             mpp[s[i]]++;
+//             mpp[t[i]]--;
+//         }
+
+//         for(auto [key, value]: mpp){
+//             if(value != 0) return false;
+//         }
+
+//         return true;
+//     }
+// };
+
+// lc_34
+// class Solution {
+// public:
+//     int left(vector<int>& nums, int target){
+//         int left = 0;
+//         int right = nums.size() - 1;
+//         int ans = -1;
+
+//         while(left <= right){
+//             int mid = left + (right - left)/2;
+
+//             if(nums[mid] == target){
+//                 ans = mid;
+//                 right = mid - 1;
+//             }
+
+//             else if(nums[mid] > target){
+//                 right = mid - 1;
+//             }
+
+//             else{
+//                 left = mid + 1;
+//             }
+//         }
+
+//         return ans;
+//     }
+
+//     int right(vector<int>& nums, int target){
+//         int left = 0;
+//         int right = nums.size() - 1;
+//         int ans = -1;
+
+//         while(left <= right){
+//             int mid = left + (right - left)/2;
+
+//             if(nums[mid] == target){
+//                 ans = mid;
+//                 left = mid + 1;
+//             }
+
+//             else if(nums[mid] < target){
+//                 left = mid + 1;
+//             }
+
+//             else{
+//                 right = mid - 1;
+//             }
+//         }
+
+//         return ans;
+//     }
+
+//     vector<int> searchRange(vector<int>& nums, int target) {
+//         return {left(nums, target), right(nums, target)};
+//     }
+// };
+
+//lc21
+// class Solution {
+// public:
+//     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+//         if(list1 == nullptr) return list2;
+//         if(list2 == nullptr) return list1;
+//         if(list1->val > list2->val) swap(list1,list2);
+
+//         ListNode* res = list1;
+//         while(list1 != nullptr && list2 != nullptr){
+//             ListNode* temp = list1;
+//             while(list1 != nullptr && list1->val <= list2->val){
+//                 temp = list1;
+//                 list1 = list1->next;
+//             }
+//             temp->next = list2;
+//             swap(list1, list2);
+//         }
+//         return res;
+//     }
+// };
