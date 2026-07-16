@@ -780,3 +780,26 @@ int main(){
 //         return {};
 //     }
 // };
+
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         int left = 0;
+//         int right = 0;
+//         int length = 0;
+
+//         unordered_set<char> mpp;
+//         while(right < s.size()){
+//             while(mpp.find(s[right]) != mpp.end()){
+//                 mpp.erase(s[left]);
+//                 left++;
+//             }
+
+//             mpp.insert(s[right]);
+//             length = max(length, right - left + 1);
+//             right ++;
+//         }
+
+//         return length;
+//     }
+// };
